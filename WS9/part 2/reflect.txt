@@ -1,0 +1,31 @@
+This workshop was quite effective when it came to teaching through example 
+the benefits and pitfalls of multithreading in a program. It became rather
+obvious that while increasing the number of threads typically leads to
+faster runtimes, it brings with it a lot of increased work, and if an
+operation is particularly slow, it can slow down all of the threads, 
+compounding the problem.
+	
+	Binary files were quite useful in the context of this workshop as 
+their use lead to faster read and write times. The reason for this speed
+is their effeciency in storing raw data, and having that effiency scale
+well with size.
+
+	The binding of a function to its arguments is primarily useful
+for creating pre-specified arguments for our functions. For example,
+using bind() on computeAvgFactorThreaded() to preset the total number of
+items speeds up execution as that value doesn't need to be located or 
+calculated. It is the same for computeVarFactor() and it's preset total
+and average, with those preset arguments speeding up execution.
+Additionally, it helps enhance the parallelization of a given computation
+in the case of using threads, shown in how those aforementioned bound
+functions were used to create the threads.
+
+	There are a number of advantages to using multiple threads in
+your program, chiefmost being the ability to split a task into its
+components and concurrently calculate them all to improve performance. 
+This ability to shorten tasks be way of simultaneous computation is what
+makes multithreading so powerful a tool. In this workshop, that was
+accomplished through the multithreaded computation of the average, in 
+computeAvgFactorThreaded, and the variance, in computeVarFactorThreaded,
+where the operations were concurrently performed on all members of the 
+data array.

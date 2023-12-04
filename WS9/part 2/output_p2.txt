@@ -1,0 +1,159 @@
+Script started on Fri 17 Nov 2023 04:08:56 PM EST
+==144126== Memcheck, a memory error detector
+==144126== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==144126== Using Valgrind-3.21.0 and LibVEX; rerun with -h for copyright info
+==144126== Command: ws data_int.dat data_int_target.dat
+==144126== 
+[38;5;9mBegin Testing the Program!
+--------------------------[0m
+
+Command Line:
+--------------------------
+  1: ws
+  2: data_int.dat
+  3: data_int_target.dat
+--------------------------
+
+==========================================================================================
+                 Average and variance of record-values using 1 thread(s).
+------------------------------------------------------------------------------------------
+Item's count in file 'data_int.dat': 500000
+  [2861, 2446, 3099, ... , 5531, 2901, 1091]
+Read [2000005] bytes from the files; the content is the same.
+Data statistics ("data_int.dat"):
+ Average:       4915.392782
+ Variance:   5515121.375856
+Time required to compute average and variance: 282 milliseconds.
+==========================================================================================
+
+
+==========================================================================================
+                 Average and variance of record-values using 2 thread(s).
+------------------------------------------------------------------------------------------
+Item's count in file 'data_int.dat': 500000
+  [2861, 2446, 3099, ... , 5531, 2901, 1091]
+Read [2000005] bytes from the files; the content is the same.
+Data statistics ("data_int.dat"):
+ Average:       4915.392782
+ Variance:   5515121.375856
+Time required to compute average and variance: 156 milliseconds.
+==========================================================================================
+
+
+==========================================================================================
+                 Average and variance of record-values using 3 thread(s).
+------------------------------------------------------------------------------------------
+Item's count in file 'data_int.dat': 500000
+  [2861, 2446, 3099, ... , 5531, 2901, 1091]
+Read [2000005] bytes from the files; the content is the same.
+Data statistics ("data_int.dat"):
+ Average:       4915.392782
+ Variance:   5515121.375856
+Time required to compute average and variance: 158 milliseconds.
+==========================================================================================
+
+
+==========================================================================================
+                 Average and variance of record-values using 4 thread(s).
+------------------------------------------------------------------------------------------
+Item's count in file 'data_int.dat': 500000
+  [2861, 2446, 3099, ... , 5531, 2901, 1091]
+Read [2000005] bytes from the files; the content is the same.
+Data statistics ("data_int.dat"):
+ Average:       4915.392782
+ Variance:   5515121.375856
+Time required to compute average and variance: 162 milliseconds.
+==========================================================================================
+
+
+==========================================================================================
+                 Average and variance of record-values using 5 thread(s).
+------------------------------------------------------------------------------------------
+Item's count in file 'data_int.dat': 500000
+  [2861, 2446, 3099, ... , 5531, 2901, 1091]
+Read [2000005] bytes from the files; the content is the same.
+Data statistics ("data_int.dat"):
+ Average:       4915.392782
+ Variance:   5515121.375856
+Time required to compute average and variance: 178 milliseconds.
+==========================================================================================
+
+
+==========================================================================================
+                 Average and variance of record-values using 6 thread(s).
+------------------------------------------------------------------------------------------
+Item's count in file 'data_int.dat': 500000
+  [2861, 2446, 3099, ... , 5531, 2901, 1091]
+Read [2000005] bytes from the files; the content is the same.
+Data statistics ("data_int.dat"):
+ Average:       4915.392782
+ Variance:   5515121.375856
+Time required to compute average and variance: 189 milliseconds.
+==========================================================================================
+
+
+==========================================================================================
+                 Average and variance of record-values using 7 thread(s).
+------------------------------------------------------------------------------------------
+Item's count in file 'data_int.dat': 500000
+  [2861, 2446, 3099, ... , 5531, 2901, 1091]
+Read [2000005] bytes from the files; the content is the same.
+Data statistics ("data_int.dat"):
+ Average:       4915.392782
+ Variance:   5515121.375856
+Time required to compute average and variance: 224 milliseconds.
+==========================================================================================
+
+
+==========================================================================================
+                 Average and variance of record-values using 8 thread(s).
+------------------------------------------------------------------------------------------
+Item's count in file 'data_int.dat': 500000
+  [2861, 2446, 3099, ... , 5531, 2901, 1091]
+Read [2000005] bytes from the files; the content is the same.
+Data statistics ("data_int.dat"):
+ Average:       4915.392782
+ Variance:   5515121.375856
+Time required to compute average and variance: 258 milliseconds.
+==========================================================================================
+
+
+==========================================================================================
+                 Average and variance of record-values using 9 thread(s).
+------------------------------------------------------------------------------------------
+Item's count in file 'data_int.dat': 500000
+  [2861, 2446, 3099, ... , 5531, 2901, 1091]
+Read [2000005] bytes from the files; the content is the same.
+Data statistics ("data_int.dat"):
+ Average:       4915.392782
+ Variance:   5515121.375856
+Time required to compute average and variance: 295 milliseconds.
+==========================================================================================
+
+
+==========================================================================================
+                 Average and variance of record-values using 10 thread(s).
+------------------------------------------------------------------------------------------
+Item's count in file 'data_int.dat': 500000
+  [2861, 2446, 3099, ... , 5531, 2901, 1091]
+Read [2000005] bytes from the files; the content is the same.
+Data statistics ("data_int.dat"):
+ Average:       4915.392782
+ Variance:   5515121.375856
+Time required to compute average and variance: 339 milliseconds.
+==========================================================================================
+
+
+
+[38;5;9m------------------------
+End Testing the Program![0m
+==144126== 
+==144126== HEAP SUMMARY:
+==144126==     in use at exit: 0 bytes in 0 blocks
+==144126==   total heap usage: 333 allocs, 333 frees, 20,460,008 bytes allocated
+==144126== 
+==144126== All heap blocks were freed -- no leaks are possible
+==144126== 
+==144126== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+Script done on Fri 17 Nov 2023 04:09:36 PM EST

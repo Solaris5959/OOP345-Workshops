@@ -1,0 +1,28 @@
+WS5 Reflection - Connor McDonald
+:: SN: 136123221 :: DT: 10/31 ::
+
+This workshop has been hugely helpful when it comes to templates and their implementation in classes. I originally made the mistake 
+of implementing the 'Collection' module in a .cpp file, but was corrected and now I know that it can only be implemented in the .h
+file. Alongside this, it gave me good practice with lambda functions, and showed me how useful they are for small algorithms and
+processes. In the context of this workshop, lambdas were used to alter the price based on a set list of conditions - a task that
+these are perfect for. Functors on the other hand are more complex, both in their definition, and in their functionality. This
+makes them less useful for the 'quick and dirty' processes that lambdas are used for as functors are more robust and permanent.
+On the other hand, it makes them the preferred option for commonly repeated tasks.
+
+	When it comes to exception handling, I am no stranger to the process. I was taught it a few years ago so the act of throwing 
+exceptions back until something finally catches it is an intuitive concept for me. In WS5, the use case was pretty primitive, only
+dealing with array out of bounds or bad file names. To handle these problems without the use of exceptions would essentially be just
+wrapping the dependent blocks of code in an if statement requiring valid data. This would result in no unexpected exceptions being
+thrown as no information is being accessed without all required information. You may have to change some of the w5_p2.cpp logic in
+printing to handle the lack of returned information but it would not be too complex.
+
+	THe identical logic between Movie and Book mean that a general function, taking in the string to parse, and an array of
+references (or pointers) to the member variables, in order, would be able to be made. This would then get each piece of data in a
+loop delimiting by comma, until the last value which would be getlined by delimiting '\0'. Each piece would be inserted into it's
+respective member in that loop. Special considerations would have to be made for the integer and double members, perhaps a parallel
+array that contains a key for the matching member's data type.
+
+	A default constructor, to my knowledge, is not a requirement as long as an alternative constructor with arguments is defined.
+That is, as long as A constructor exists, you don't NEED the default. So assuming that you avoid calling a no-argument constructor,
+there will be no issues. Once any constructor is explicitly defined, the compiler will stop implicitly defining the default
+constructor, further showing that it is not a requirement to have the default as long as an alternative is defined.

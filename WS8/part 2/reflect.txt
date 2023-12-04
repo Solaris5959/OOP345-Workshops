@@ -1,0 +1,38 @@
+Smart pointers are vastly superior to raw pointers in almost all situations - the ease 
+of use simply can't be compared between the two. The perfect example of this is the
+catch block shenanigans that take place in excludeRaw(). Using Smart pointers allows
+developers to simplify their code, and ensures memory management is consistently good.
+
+The primary difference between the two in my solution is the need for constant delete
+calls in exludeRaw, and the total lack of any memory management in exludeSmart.
+Smart pointers having what is practically automatic reference counting is so freeing
+and cuts down heavily on both thinking and code complexity. That said, I made use of
+shared smart pointers, which are for all intents and purposes, raw pointers but 
+smarter. Where unique pointers are un-copyable, shared pointers act in all the same
+ways a raw pointer does, but manages the memory for you.
+
+The case of the repeated duplications of objects is most likely caused by the 
+sequential allocation, copying, and validation of every valid profile. As the 
+dynamically allocated profile is copied multiple times afterwards to perform
+additional operations, it causes the constant constructor calls, which have the print
+statements in question within them. Fixing this issue would instead use std::move,
+rather than copy, to perform these operations. Replacing the following would suffice 
+to minimize the constant copy constructor calls:
+
+	result += newProfile
+to
+	result += std::move(newProfile)
+
+Using std::move() within the operator+=() overload there would be no issues on the end
+of the Database, as the parameter would be moved into the collection vector without
+issue. The parameter however would be left in an ambiguous state which could lead to
+problems for the original object. The change for the operator+=() function would be as 
+follows:
+
+void operator+=(T&& newItem) {
+	collection.push_back(std::move(newItem));
+}
+
+Despite having no explicitly defined move constructor, the Database object would 
+simply use the default compiler-generated move constructor. This is the reason the
+"newItem" object would be harmed by the operation, but not the Database object.

@@ -1,0 +1,22 @@
+As dynamic memory persists outside of the scope it was declared in, while simultaneously 
+occupying the same location in memory, it requires manual deallocation. Normally, with
+statically declared objects, the actual object does not persist outside of the scope it
+was declared in. This means that whenever it is brought to a "higher" point in the
+program, it is cloned. Dynamic memory is declared on the heap (normally), and will not
+be deallocated when it goes out of scope. Therefore, the developer must deallocate it
+themselves when the data is no longer needed. In our vector of Resources, the Resources
+themselves are dynamically allocated, and require manual deallocation.
+
+Calling functions of a pointer, in our case the Resource pointers stored in our vector
+of Resources, you must first "dereference" the pointer. Dereferencing a pointer is a 
+process that returns the object at the location in memory that the pointer is holding.
+That is, a pointer holds an address, and dereferencing is the process of going to that
+address. Once the pointer is dereferenced, we are free to use any functions we wish.
+
+We would not have been able to use a vector of type <Resource> (rather than a vector
+of type <Resource*>) as a Resource is a parent class. In our context, this means it
+has no implementations, and the two children classes - Directory and File - have
+differing implementations, with differing sizes. Had we used a vector of objects,
+rather than pointers, each entry of the vector would have variable size, which is
+undefined behaviour for a vector. As such, using pointers is the only way to
+implement this workshop to specification.

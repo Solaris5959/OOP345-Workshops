@@ -1,0 +1,41 @@
+The STL Functions I made use of are as follows:
+- for_each();
+- sort();
+- any_of();
+- copy_if();
+
+-- for_each()
+This function is designed for performing actions on each member of a container - in this case a vector - and 
+I made use of it to sum the total and country cases and deaths, and to update the 'status' field of the 'Covid'
+structure. There aren't any alternatives in the STL but one could always just use a range-based loop, i.e. a
+'for' loop, though in this case that was prohibited. 
+
+-- sort()
+I made use of this to sort the 'm_contents' vector based on a given field to sort by. The alternative, again,
+is a traditional loop, but there are also external sorting algorithms that can be used, such as qsort() (quick
+sort) that have similar performance. 
+
+-- any_of()
+This function is essentially an early exit for loop, which in my case iterates through the 'm_contents' vector
+and returns true if any entry matches the specified conditions. There are a few alternatives to this function
+but they don't do exactly what was needed for this task. For example, std::find() would be able to locate an
+object in a vector, but it wouldn't be able to find a member with specific matching criteria. 
+
+-- copy_if()
+With its primary purpose being conditional copies, it was perfect for the task of getting a list of entries
+with deaths over a specified number. This, again, can be done with traditional loops, but it is a very simple
+solution to the problem. 
+
+Using STL functions instead of using loops was a challenge at points due to some of the intricacies of the
+syntax and lambda function scope. For example, the lambda functions cannot access the private members, so I
+had to opt for a recursive solution for file -> CovidCollection constructor. That said, they provide an ease
+of use once those creases are worked out which makes them very appealing. Additionally, they are very 
+efficient, meaning that 9 times out of 10 using the STL functions is more efficient than an implementation 
+you could comeup with. 
+
+My solution to the sort function 'field' problem was to simply catch the "DEFAULT" field and anything else in
+an else statement. Realistically, it is the safest option (outside of throwing an exception) and maintains
+functionality regardless of erroneous input. An improvement could be throwing said exception but as I am 
+unable to change the code in main() it was off the table, unfortunately. Otherwise, an enumeration could be 
+declared with each option being one of its enumerators. This would ensure no erroneous fields are passed and
+it would indeed be caught by the compiler instead of at runtime.

@@ -1,0 +1,42 @@
+Script started on Fri 17 Nov 2023 03:49:54 PM EST
+==141029== Memcheck, a memory error detector
+==141029== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==141029== Using Valgrind-3.21.0 and LibVEX; rerun with -h for copyright info
+==141029== Command: ws data_int.dat data_int_target.dat
+==141029== 
+[38;5;9mBegin Testing the Program!
+--------------------------[0m
+
+Command Line:
+--------------------------
+  1: ws
+  2: data_int.dat
+  3: data_int_target.dat
+--------------------------
+
+==========================================================================================
+                  Average and variance of record-values using a functor.
+------------------------------------------------------------------------------------------
+Item's count in file 'data_int.dat': 500000
+  [2861, 2446, 3099, ... , 5531, 2901, 1091]
+Read [2000005] bytes from the files; the content is the same.
+Data statistics ("data_int.dat"):
+ Average:       4915.392782
+ Variance:   5515121.375856
+Time required to compute average and variance: 147 milliseconds.
+==========================================================================================
+
+
+
+[38;5;9m------------------------
+End Testing the Program![0m
+==141029== 
+==141029== HEAP SUMMARY:
+==141029==     in use at exit: 0 bytes in 0 blocks
+==141029==   total heap usage: 12 allocs, 12 frees, 2,108,854 bytes allocated
+==141029== 
+==141029== All heap blocks were freed -- no leaks are possible
+==141029== 
+==141029== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+Script done on Fri 17 Nov 2023 03:49:59 PM EST
